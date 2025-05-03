@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output, output } from '@angular/core';
+
+
+interface User {
+  id: string;
+  name: string;
+  avatar: string;
+}
 
 @Component({
   selector: 'app-user',
@@ -8,4 +15,14 @@ import { Component } from '@angular/core';
 })
 export class UserComponent {
 
+  @Input({required:true}) user!:User;
+  @Output() select = new EventEmitter();
+
+  get avatarPath(): string {
+    return `users/${this.user.avatar}`;
+  }
+
+  onSelectUser() {
+    this.select.emit(this.user.id);
+  }
 }
