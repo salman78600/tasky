@@ -12,6 +12,7 @@ import { UserTaskComponent } from "./user-task/user-task.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  
   title = 'task_app';
   users = DUMMY_USERS;
   selectUser?:string;
