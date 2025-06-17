@@ -26,4 +26,5 @@ export class NewTaskComponent {
       summary: this.summary, 
       date: this.date})
   }
+
 }

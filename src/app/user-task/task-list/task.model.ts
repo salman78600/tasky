@@ -1,4 +1,5 @@
 export interface Task {
+    date: string;
     id: string;
     userId: string;
     title: string;

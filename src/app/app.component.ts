@@ -23,6 +23,5 @@ export class AppComponent {
 
   onSelectUser(id: string) {
     this.selectUser= id;
-    console.log('Selected user ID:', id);
   }
 }
